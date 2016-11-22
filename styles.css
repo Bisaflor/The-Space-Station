@@ -1,0 +1,375 @@
+/*-----------------------------------
+
+BASIC SETUP
+
+Red Color #e74c3c
+
+/*-----------------------------------*/
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after,
+.container:after,
+.navbar:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*=======================================
+  @MEDIA QUERIES
+  =======================================*/
+@media only screen and (min-device-width: 200px) and (max-device-width: 480px) {
+    .home-text-box { 
+        font-size: 20px ;
+         padding: 5px 5px;
+    }
+     .navi {
+        font-size: 50%;
+         word-spacing: 5px;
+    }
+    .container {
+        width: 381px;
+    }
+}
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
+    .home-text-box { 
+        font-size: 24px ;
+        padding: 5px 5px;
+    }
+    
+    .navi {
+        font-size: 75%;
+        word-spacing: 5px;
+    }
+    .container {
+        width: 767px;
+    }
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+  .container {
+    width: 1023px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media only screen and (min-device-width: 1201px) and (max-device-width: 2048px){
+  .container {
+    width: 1480px;
+  }
+}
+
+/*-----------------------------------
+                GENERAL
+/*-----------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    line-height: 1.2;
+}
+
+html {
+    background-color: #000;
+    color: #555;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 75%;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 50%;
+    -moz-text-size-adjust: 50%;
+	-ms-text-size-adjust: 50%;
+    overflow-y: scroll;
+}
+
+body {
+    font-size: 14px;
+}
+
+h1 {
+    border-bottom: 5px double #e74c3c;
+    font-size: 300%;
+    text-align: left;
+    color: white;
+    padding-bottom: 10px;
+    margin: 50px 0px;
+}
+
+
+/*-----------------------------------
+                HEADER
+/*-----------------------------------*/
+
+header {
+    background-image: 
+        linear-gradient(
+            rgba(0,0,0,0.5), 
+            rgba(0,0,0,0.5)),
+        url(images/planets.jpg);
+    height: 100vh; /*100 of viewpoint*/
+    background-size: cover;
+    background-position: center;
+    margin: 0px 0px;
+}
+
+
+.home-text-box {
+    position: absolute; 
+    /*die einzige, bei der man es zentrieren kann*/
+    /*width: 1140px;*/
+    max-width: 1140px;
+    padding: 20px 20px;
+    top: 50%;
+    left: 50%;
+    text-transform: uppercase;
+    font-size: 300%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    border: 5px double white;
+    color: #fff;
+    /*-----------------------------------
+    filter: blur(2px);
+    animation-name: textcolor;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    /*-----------------------------------*/
+}
+
+.home-text-box:hover {
+    border: 5px double #e74c3c;
+    color: #e74c3c;
+}
+
+@keyframes textcolor {
+    0%, 100%   { color:#fff }
+    50% {color: #e74c3c}
+}
+
+.logo {
+    max-height: 30px;
+    float: right;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+.navi {
+    float: left;
+    list-style: none;
+    margin-top: 2%;
+    margin-left: 2%;
+    word-spacing: 20px;
+    font-size: 200%;
+    text-transform: uppercase;
+    line-height: 30px;
+    display: inline-block;
+    position: fixed;
+}
+
+.navi a:link,
+.navi a:visited {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px outset transparent;
+    transition: border-bottom 0.7s; /*Zeitverzögerung, wenn man über Link fährt*/
+    padding: 4px 0; /*top/bottom 8 left/right 0*/
+}
+
+.navi a:hover,
+.navi a:active{
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px outset #e74c3c;
+    cursor: pointer;
+}
+
+/*-----------------------------------
+                GALLERY
+/*-----------------------------------*/
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+
+.flex-container {
+    margin: 0 auto;
+    max-width: 1140px;
+    height: auto;
+}
+
+/*
+.photo-container {
+    max-width: 300px;
+    height: auto;
+    display: inline;
+    float:left;
+    border-radius: 15%;
+    overflow: hidden;
+    margin: 20px 20px;
+    position: relative;
+}
+
+.photo-container img {
+    display: block;
+}
+
+.photo-container img:hover {
+    opacity: 0.5;
+    transform: scale(1.2);
+    -webkit-transform:scale(1.2); /*wenn 1 dann gibt eine hässliche weisse Linie*//*
+    transition: transform 2s;
+    border-radius: 15%;
+}
+
+.photo-overlay {
+	color: #fff;
+	padding: 20px 20px;
+	justify-content: center; /* For centering text inside .photo-overlay *//*
+	align-items: center;
+    opacity: 0;
+    text-decoration: none;
+    position: absolute;
+}
+
+.photo-overlay:hover {
+	opacity: 1;
+}*/
+
+.photo-container {
+    position: relative;
+    margin: 0px auto;
+    display:inline;
+    max-width: 300px;
+    float: left;
+    padding:20px 20px;
+}
+
+.photo-container img {
+    max-width: 100%;
+}
+
+
+.photo img {
+    display: block;
+    border-radius: 15%;
+    transition: transform 2s;
+}
+
+.photo:hover img {
+    display:block;
+    filter: sepia(50%);
+    transform: scale(1.2);
+    -webkit-transform:scale(1.2); /*wenn 1 dann gibt eine hässliche weisse Linie*/
+    border-radius: 15%;
+}
+
+.photo-overlay {
+    opacity: 0;
+    position: absolute; /*absolut: drin; relative: unterhalb bild*/
+    width: 100%;
+    color: #fff;
+    left: 0;
+    bottom: 0;
+    padding: 0.75em 1em;
+    font-weight: 400;
+    z-index: 2;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.7);
+    -webkit-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+.photo-container:hover .photo-overlay {
+    opacity: 1;
+}
+
+
+
+/*-----------------------------------
+                RESERVATIONS
+/*-----------------------------------*/
+
+.container_rsvp {
+    background-color: #394649;
+    width: 100%;
+}
+
+.RESERVATIONFORM {
+    MARGIN: 0 AUTO;
+    max-width: 600PX;
+    display: block;
+    padding: 20px 20px;
+    color: #ecf0f1;
+}
+
+.reservation {
+    POSITION: block;
+}
+
+.form-rsvp {
+    padding: 20px 0px;
+}
+
+.oben {
+    display: block;
+    float:left;
+}
+
+.rsvp {
+    float: right;
+}
+
+.submit {
+    justify-content: center;
+    display: inline;
+    background-color: #ff4141;
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: 1px solid #ff4141;
+    color: white;
+}
+
+.submit:hover {
+    border: 1px solid #9DA5AB;
+    color:#ff4141;
+    background-color: white;
+}
+
+.terms {
+    display: inline;
+    font-size: 0.8em;
+}
+
+
+/*-----------------------------------
+                footer
+/*-----------------------------------*/
+.footer {
+    max-width: 1140px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+
+
+
